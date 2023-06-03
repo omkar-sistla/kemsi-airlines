@@ -96,7 +96,7 @@ footer{
         max-width: 96%;
     }    
 }
-@media(max-width:1014px){
+@media(min-width:600px) and (max-width:1014px){
     .booking{
         max-width: 80%;
         height: 300px;
@@ -107,7 +107,7 @@ footer{
         grid-template-columns: repeat(2,auto)
     }
 }
-@media(max-width:600px){
+@media(max-width:599px){
     .booking{
         max-width: 85%;
         height: 500px;
