@@ -1,7 +1,7 @@
 html{
     background-color: #ffffff;
 }
-*{
+body{
     margin: 0%;
 }
 #TOP_ELEMENT{
@@ -35,14 +35,12 @@ html{
 .menu{
     display: flex;
     flex-direction: column;
-    gap: 20px;
     align-items: flex-end;
-    padding-bottom: 20px;
 }
 .menu a{
     text-decoration: none;
     font-family: sans-serif;
-    font-size: 15px;
+    font-size: 10pt;
     color: white;
 }
 .cover{
@@ -53,7 +51,7 @@ html{
 #type{
     display: flex;
     gap: 50px;
-    align-self: flex-start;
+
     padding-left: 15px;
 }
 #details{
@@ -81,9 +79,9 @@ html{
     height: 50px;
     border: 0px;
 }
-.booking .place,.date,#flight_class,#passengers:focus{
+/*.booking .place,.date,#flight_class,#passengers:focus{
     outline: none;
-}
+}*/
 .booking .details{
     border: 1px solid black;
     background-color: white;
@@ -96,7 +94,7 @@ footer{
         max-width: 96%;
     }    
 }
-@media(min-width:600px) and (max-width:1014px){
+@media(min-width:480px) and (max-width:1014px){
     .booking{
         max-width: 80%;
         height: 300px;
@@ -106,14 +104,30 @@ footer{
         grid-template-rows: repeat(3,auto);
         grid-template-columns: repeat(2,auto)
     }
+    .cover{
+        height: 45vh;
+        width: 100vw;
+        object-fit: cover;
+        object-position: center;
+    }
+
 }
-@media(max-width:599px){
+@media(max-width:480px){
+    .cover{
+        height: 45vh;
+        width: 100vw;
+        object-fit: cover;
+        object-position:center;
+    }
     .booking{
-        max-width: 85%;
-        height: 500px;
+        max-width: 85vw;
+        height: 100vh;
     }
     #details{
         display: flex;
         flex-direction: column;
+    }
+    input[type=date], input[type=text]{
+       width:70vw;
     }
 }
