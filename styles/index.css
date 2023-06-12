@@ -1,0 +1,282 @@
+html{
+    background-color: white;
+}
+body{
+    margin: 0%;
+}
+
+/***********************NAV BAR STARTS***********************/
+#TOP_ELEMENT{
+    position: fixed;
+    background-color: #E57C23;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 999;
+}
+#Logo{
+    width: 200px;
+    height: 100px;  
+}
+.menu>.upper{    
+    list-style: none;
+    text-align: center;
+    padding-right: 10px;
+    display: flex;
+    gap: 20px; 
+}
+.menu>.lower{
+    list-style: none;
+    text-align: center;
+    padding-right: 10px;
+    display: flex;
+    gap: 30px; 
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.menu a{
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 10pt;
+    color: white;
+}
+/***********************NAV BAR ENDS***********************/
+
+.cover{
+    width: 100%;
+    height:82.6vh;
+    object-fit: cover;
+    object-position: center;
+    top: 0px;
+}
+
+/***********************BOOKING SECTION STARTS***********************/
+#type{
+    display: flex;
+    gap: 50px;
+}
+#details{
+    display: flex;
+    gap: 20px;
+}
+#row_3{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: flex-start;
+}
+.booking{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    max-width: fit-content;
+    height: 200px;
+    margin: auto;
+    position: relative;
+    top: -100px;
+    padding: 15px 30px 15px 30px;
+    box-shadow: 0 4px 10px grey;
+}
+.booking input[type=text], input[type=date]{
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+}
+.booking button{
+    height: 50px;
+    border: none;
+    background-color:orange ;
+    border-radius: 10px;
+    color: white;
+}
+#row_3>.show_flight{
+    border: none;
+}
+/*.booking .place,.date,#flight_class,#passengers:focus{
+    outline: none;
+}*/
+.booking .details, .row_3{
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 10px;
+}
+/***********************BOOKING SECTION ENDS***********************/
+
+/***********************Card_slider STARTS***********************/
+h1{
+    color: #f87a02;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+
+    text-align: center;
+}
+h3{
+    color: #025464;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+}
+.card_slider{
+    display: flex;
+    gap: 20px;
+    max-width: 940px;
+    overflow-x: scroll;
+    margin: auto;
+    position: relative;
+    cursor: grab;   
+}
+.card{
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.card>.body{
+    width: 300px;
+    height: 300px;
+    flex-direction: column;
+    position: relative;
+}
+.body img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;    
+}
+.body .text{
+    list-style: none;    
+    width: 100%;
+    position: absolute;
+    bottom: 0px;   
+    color: white;
+    margin: 0%;
+    text-align: left;
+    padding: 0 8px 0 8px;
+}
+.body .text .name{
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 1px;
+}
+.card>.tag{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: black;
+    align-self: center;
+}
+.tag a{
+    color: white;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 11pt;
+    padding: 15px;
+    padding-right: 40px;
+    padding-left: 40px;
+    background-color: #f87a02;
+    text-decoration: none;
+    text-align: center;
+}
+/***********************Card_slider ENDS***********************/
+#plans,#guidelines{
+    margin: 8px;
+}
+#guidelines{
+    margin-top: 100px;
+}
+#guidelines .text{
+    padding: 0;
+}
+#guidelines .text .name{
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+footer{
+    text-align: center;
+}
+@media(min-width:1015px) and (max-width:1200px){
+    .booking{
+        max-width: 96%;
+    }    
+}
+@media(min-width:480px) and (max-width:1014px){
+    .booking{
+        max-width: 80%;
+        padding: 26px 0 26px 0;
+        height: auto;
+        flex-direction: column;   
+        align-items: center;    
+    }
+    #details{
+        display: grid;
+        grid-template-rows: repeat(3,auto);
+        grid-template-columns: repeat(2,auto)
+    }
+    #row_3{
+        display: grid;
+        grid-template-rows: repeat(2,auto);
+        grid-template-columns: repeat(4,auto);
+    }
+    #row_3 .spl{
+        grid-column: span 2;
+    }
+    #row_3 .promo{
+        grid-column: span 2;
+    }
+    .cover{
+        height: 45vh;
+        width: 100vw;
+        object-fit: cover;
+        object-position: center;
+    }
+
+}
+@media(max-width:480px){
+    #TOP_ELEMENT{
+        height: 50px;
+    }
+    #Logo{
+        height:50px;
+        width: 100px;
+    }
+    .cover{
+        height: 45vh;
+        width: 100vw;
+        object-fit: cover;
+        object-position:center;
+    }
+    .booking{
+        max-width: 85vw;
+        height: auto;
+        gap: 20px;
+        padding: 26px 0 26px 0;
+        top: -7.7vh;
+    }
+    #details,#row_3{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+    input[type=text],button[id=show_flight]{
+       width:70vw;
+    }
+    #details>.date_details{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    input[type=date]{
+        width:auto;
+    }
+}

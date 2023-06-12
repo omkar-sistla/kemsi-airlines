@@ -2,47 +2,52 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>KEMSI AIRLINES</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="stylesheet" href="./styles/index.css">
     </head>
     <body>
-        <div id="TOP_ELEMENT">
-            <div class="logo">
-                <img id="Logo" src="./assets/images/KEMSI AIRLINES (2).png" alt="Logo of Kemsi Airlines">
+<!----------------------NAV BAR STARTS---------------------->
+        <header>
+            <div id="TOP_ELEMENT">
+                <div class="logo">
+                    <img id="Logo" src="./assets/images/logo.png" alt="Logo of Kemsi Airlines">
+                </div>
+                <div class="menu">
+                    <ul class="upper">
+                        <li><a id="Contact"href="">Contact Us</a></li>
+                        <li><a id="Login" href="./public/login.html">Login</a></li>    
+                    </ul>
+                    <ul class="lower">
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Destinations</a></li>
+                        <li><a href="">Feedback</a></li>
+                        <li><a href="">Plan your journey</a></li>
+                    </ul>                
+                </div>
             </div>
-            <div class="menu">
-                <ul class="upper">
-                    <li><a id="Contact"href="">Contact Us</a></li>
-                    <li><a id="Login" href="">Login</a></li>    
-                </ul>
-                <ul class="lower">
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">Destinations</a></li>
-                    <li><a href="">Feedback</a></li>
-                    <li><a href="">Plan your journey</a></li>
-                </ul>                
-            </div>
-        </div>
+        </header>
+<!----------------------NAV BAR ENDS---------------------->    
 
-        <img class="cover" src="./assets/images/cover_photo.jpg" alt="Aeroplane" draggable="true"/>
+<!----------------------COVER IMAGE---------------------->
+        <img class="cover" src="./assets/images/cover.jpg" alt="Aeroplane" draggable="true"/>
+<!----------------------COVER IMAGE---------------------->
 
+<!----------------------BOOKING SECTION STARTS---------------------->
         <div class="booking">
             <div id="type">
                 <li class="one_way">
-                    <input type="radio" class="one_way" id="one_way">
-                    <label for="one_way" class="one_way">One Way</label>
+                    <label for="one_way" class="one_way"><input type="radio" class="one_way" id="one_way" name="trip-type">One Way</label>
                 </li>
-                <li class="round_trip">
-                    <input type="radio" class="round_trip" id="round_trip">
-                    <label for="round_trip" class="round_trip">Round Trip</label>
+                <li class="round_trip">                    
+                    <label for="round_trip" class="round_trip"><input type="radio" class="round_trip" id="round_trip" name="trip-type">Round Trip</label>
                 </li>    
             </div>
             <div id="details">
                 <li class="details place_details"><input type="text" placeholder="From" class="place"></li>
                 <li class="details place_details"><input type="text" placeholder="To" class="place"></li>
                 <li class="details date_details" >
-                    <label for="depart" >Depart:</label>
+                    <label for="depart">Depart:</label>
                     <input type="date" id="depart" class="date">                    
                 </li> 
                 <li class="details date_details">
@@ -50,9 +55,128 @@
                     <input type="date" id="return" class="date">                   
                 </li>
                 <li class="details other_details"><input type="text" placeholder="Passengers" id="passengers"></li>
-                <li class="details other_details"><input type="text" placeholder="Class" id="flight_class"></li>      
-            </div>                 
+                <li class="details other_details"><input type="text" placeholder="Class" id="flight_class"></li>
+            </div>
+            <div id="row_3">
+                <li class="row_3 fare_type spl"><input type="text" placeholder="Special Fare" id="special_fare"></li>
+                <li class="row_3 fare_type"><input type="text" placeholder="Add Promocode" id="add_promo"></li> 
+                <li class="row_3 show_flight"><button id="show_flight">Show Flights</button></li>                  
+            </div>                             
         </div>
+<!----------------------BOOKING SECTION ENDS---------------------->
+
+<!----------------------PLANS STARTS---------------------->
+<div id="plans">
+    <H1>Diverse Packages, Limitless Destinations</H1>
+    <h3>Unlock the best of travel with our custom-made packages, offering incredible value for your money.</h3>
+    <div class="card_slider">
+        <div class="card">
+            <div class="body">
+                <img src="./assets/images/group_travel.jpg" alt="">
+                <div class="text">
+                    <li class="name">Travel With Group</li>
+                    <li class="description">Ready for an amazing group outing?</li>
+                </div>
+            </div>
+            <div class="tag">
+                <a href="">Learn More</a>
+            </div>
+        </div>     
+        <div class="card">
+            <div class="body">
+                <img src="./assets/images/fly_stay_explore.jpg" alt="">
+                <div class="text">
+                    <li class="name">Fly, Stay, Explore</li>
+                    <li class="description">Travel to multiple destinations and explore...</li>
+                </div>
+            </div>
+            <div class="tag">
+                <a href="">Learn More</a>
+            </div>
+        </div>     
+        <div class="card">
+            <div class="body">
+                <img src="./assets/images/engage_tradition.jpg" alt="">
+                <div class="text">
+                    <li class="name">Engage Traditions</li>
+                    <li class="description">Dvelve deep into the local culture</li>
+                </div>
+            </div>
+            <div class="tag">
+                <a href="">Learn More</a>
+            </div>
+        </div>     
+        <div class="card">
+            <div class="body">
+                <img src="./assets/images/wellness.jpg" alt="">
+                <div class="text">
+                    <li class="name">Welleness Retreat</li>
+                    <li class="description">Wanna go o</li>
+                </div>
+            </div>
+            <div class="tag">
+                <a href="">Learn More</a>
+            </div>
+        </div>     
+    </div>
+</div>
+
+<!----------------------PLANS ENDS---------------------->
+
+<!----------------------GUIDELINES STARTS---------------------->
+<div id="guidelines">
+    <h1>Jet Set Go, with ease...</h1>
+    <h3>Take a moment to familiarize yourself with our travel guidelines.</h3>
+    <div class="card_slider">
+        <div class="card">
+            <div class="body">
+                <img src="./assets/images/baggage.jpg" alt="">
+                <div class="text">
+                    <li class="name">Baggage Allowance</li>
+                </div>
+            </div>
+            <div class="tag">
+                <a href="">Learn More</a>
+            </div>
+        </div>     
+        <div class="card">
+            <div class="body">
+                <img src="./assets/images/boarding.jpg" alt="">
+                <div class="text">
+                    <li class="name">Boarding and Check-In</li>
+                </div>
+            </div>
+            <div class="tag">
+                <a href="">Learn More</a>
+            </div>
+        </div>     
+        <div class="card">
+            <div class="body">
+                <img src="./assets/images/in_flight.jpg" alt="">
+                <div class="text">
+                    <li class="name">In-Flight</li>
+                </div>
+            </div>
+            <div class="tag">
+                <a href="">Learn More</a>
+            </div>
+        </div>     
+        <div class="card">
+            <div class="body">
+                <img src="./assets/images/Contact_us.jpg" alt="">
+                <div class="text">
+                    <li class="name">Ask for support</li>
+                </div>
+            </div>
+            <div class="tag">
+                <a href="">Contact</a>
+            </div>
+        </div>     
+    </div>
+</div>
+
+<!----------------------GUIDELINES ENDS---------------------->
+
 
         <H2>HEY! USER WELCOME!</H2>
         <P>Hello user how are you. <br> We are very delighted to have you here.</P>
