@@ -244,11 +244,11 @@ footer{
 }
 @media(max-width:480px){
     #TOP_ELEMENT{
-        height: 50px;
+        height: 80px;
     }
     #Logo{
-        height:50px;
-        width: 100px;
+        height:80px;
+        width: 160px;
     }
     .cover{
         height: 45vh;
