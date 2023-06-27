@@ -8,13 +8,24 @@ body{
 /***********************NAV BAR STARTS***********************/
 #TOP_ELEMENT{
     position: fixed;
-    background-color: #E57C23;
     height: 100px;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     z-index: 999;
+}
+#TOP_ELEMENT:hover{
+    background-color: #E57C23;
+    transition:1s;
+}
+#TOP_ELEMENT.scrolled{
+    background-color: #E57C23;
+    box-shadow: 0px 2px 10px rgb(111, 111, 111);
+    transition:0.5s;
+}
+#TOP_ELEMENT>i{
+    display: none;
 }
 #Logo{
     width: 200px;
@@ -38,12 +49,19 @@ body{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    justify-content: center;
 }
 .menu a{
     text-decoration: none;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 10pt;
     color: white;
+}
+.menu a:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
 }
 /***********************NAV BAR ENDS***********************/
 
@@ -85,6 +103,7 @@ body{
     top: -100px;
     padding: 15px 30px 15px 30px;
     box-shadow: 0 4px 10px grey;
+    border-radius: 50px 50px 50px 50px;
 }
 .booking input[type=text], input[type=date]{
     height: 50px;
@@ -112,11 +131,10 @@ body{
 /***********************BOOKING SECTION ENDS***********************/
 
 /***********************Card_slider STARTS***********************/
-h1{
+#plans h1, #guidelines h1{
     color: #f87a02;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
-
     text-align: center;
 }
 h3{
@@ -125,16 +143,47 @@ h3{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12pt;
 }
+.card_section{
+    display: flex;
+    max-width: 1000px;
+    margin: auto;
+}
+.card_section .sliders{
+    font-size: 30px;
+    color: gray;
+    align-self: center;
+    user-select: none;
+}
+.card_section .sliders:hover{
+    color: #f87a02;
+    cursor: pointer;
+}
 .card_slider{
     display: flex;
     gap: 20px;
     max-width: 940px;
-    overflow-x: scroll;
+    overflow-x: auto;
     margin: auto;
     position: relative;
     cursor: grab;   
+    user-select: none;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+.card_slider::-webkit-scrollbar{
+    display: none;
+}
+.card_slider.drag{
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+    cursor: grabbing;
+}
+.card_slider.notransition{
+    scroll-behavior: auto;
 }
 .card{
+    scroll-snap-align: start;
     width: 300px;
     height: auto;
     display: flex;
@@ -160,7 +209,6 @@ h3{
     color: white;
     margin: 0%;
     text-align: left;
-    padding: 0 8px 0 8px;
 }
 .body .text .name{
     font-size: 30px;
@@ -191,6 +239,9 @@ h3{
 #plans,#guidelines{
     margin: 8px;
 }
+#plans .body .text .name,.description{
+    padding-left: 8px;
+}
 #guidelines{
     margin-top: 100px;
 }
@@ -202,17 +253,224 @@ h3{
     font-size: 25px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-footer{
+
+
+.offer_section{
+    max-width: 520px;
+}
+.offer_slider{
+    display: flex;
+    max-width: 460px;
+    background-color: black;
+}
+.offer_card{
+    min-width: 420px;
+    height: 200px;
+    position: relative;
+    padding: 20px;
+}
+.offer_image{
+    padding: 0;
+    min-width: 100%;
+}
+.offer_image img{
+    min-width: 100%;
+}
+.offers{
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(0deg, #f87a02, #c68549); */
+    background: linear-gradient(45deg,#eccb10,#ece1a5,#eccb10);
+    display: flex;
+    align-items: center;
+    gap: 0;
+    color: #333333;
+    font-family: sans-serif;
+    position: relative;
+    /* box-shadow: 0 5px 15px 1px gray; */
+    user-select: none;
+} 
+.offers .left_circles, .right_circles{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    left: 0px;
+    top: 1px;
+    align-self: flex-start;
+}
+.offers .right_circles{
+    left: calc(100% - 8px);
+}
+.offers .left_circles div, .right_circles div{
+    width: 8px;
+    height: 16px;
+    z-index: +1;
+}
+.offers .left_circles div{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    /* background: linear-gradient(-90deg,#8a8a8a,#bebebe); */
+    background-color: black;
+}
+.offers .right_circles div{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    /* background: linear-gradient(90deg,#8a8a8a,#bebebe); */
+    background-color: black;
+}
+.offers .circle1, .offers .circle2{
+    width: 20px;
+    height: 10px;
+    position: absolute;
+    left: calc(30% - 10px);
+}
+.offers .circle1{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    top: 0px;
+    /* background: linear-gradient(0deg,#a8a8a8,#dcdcdc); */
+    background-color: black;
+}
+.offers .circle2{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    top:calc(100% - 10px);
+    /* background: linear-gradient(180deg,#6d6d6d,#a1a1a1); */
+    background-color: black;
+}
+.offers .logo{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold';
+    justify-self: flex-start;
+    color: white;
+    background-color: #333333;
+    padding: 4px;
+    font-size: 24px;
+    border-radius: 15px;
+}
+.offers .right_out{
+    width: 70%;
+    height: 100%;    
+    display: flex;
+}
+.offers .right_part{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 83%;
+    border-right: 4px solid #333333;
+    border-left: 4px solid #333333;
+
+}
+.offers .left_out{
+    width: 30%;
+    display: flex;
+    height: 100%;
+    border-right: 1px dashed #333333;
+    align-items: center;
+    justify-content: center;
+}
+.offers .left_part{
+    display: flex;
+    flex-direction: column;
+    color: #333333;
+    width: 80%;
+    height: 85%;
+    align-items: center;
+    border-right: 5px solid #333333;
+}
+.offers .left_part .code_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50%;
+}
+.offers .left_part .validity{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50%;
     text-align: center;
+}
+.offers .offer_name{
+    margin-bottom: 0;
+    margin-top: 5px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 34px;    
+}
+.offers .offer_tag{
+    margin: 0px;
+    font-size: 14px;
+}
+.offers .use_code{
+    margin: 0;
+    font-size: 10px;
+    color: #333333;
+}
+.offers .code{
+    margin-top: 0;
+    font-size: 16px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 5px;
+    border: 2px solid #333333;
+}
+.offers .offer_date{
+    margin-bottom: 5px;
+    color: #333333;
+}
+.offers .valid_till{
+    margin: 0px;
+    padding: 3px 10px 0px 10px;
+    border-top:2px solid #333333 ;
+}
+
+#why_kemsi{
+    width: 100%;
+    padding: 150px 0px 150px 0px;
+    background-color: #025464;
+    text-align: center;
+    margin-top: 100px;
+}
+#why_kemsi a{
+    text-decoration: none;
+    color: white;
+    font-size: 48px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: #f87a02;
+    padding: 25px;
+    border-radius: 20px;
+}
+footer{
+    margin-top: 100px ;
+    text-align: center;
+    font-family: sans-serif;
+}
+footer .follow_us p{
+    font-size: 20px;
+}
+footer .social_media{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    color: black;
+    font-size: 40px;
+}
+footer .social_media a{
+    text-decoration: none;
+    color: black;
 }
 @media(min-width:1015px) and (max-width:1200px){
     .booking{
         max-width: 96%;
     }    
 }
-@media(min-width:480px) and (max-width:1014px){
+
+@media(min-width:481px) and (max-width:1014px){
     .booking{
-        max-width: 80%;
+        max-width: 80vw;
         padding: 26px 0 26px 0;
         height: auto;
         flex-direction: column;   
@@ -227,6 +485,7 @@ footer{
         display: grid;
         grid-template-rows: repeat(2,auto);
         grid-template-columns: repeat(4,auto);
+        justify-content: center;
     }
     #row_3 .spl{
         grid-column: span 2;
@@ -234,21 +493,74 @@ footer{
     #row_3 .promo{
         grid-column: span 2;
     }
+    #row_3 .show_flight{
+        grid-column: 2/4;
+    }
+    #row_3 button{
+        width: 100%;
+    }
     .cover{
         height: 45vh;
         width: 100vw;
         object-fit: cover;
         object-position: center;
     }
+    .card_slider{
+        max-width: 620px;
+    }
+    .card_section{
+        max-width: 680px;
+    }
+    .offer_section{
+        max-width: 500px;
+    }
+    .offer_slider{
+        max-width: 470px;
+    }
 
 }
+
 @media(max-width:480px){
     #TOP_ELEMENT{
         height: 80px;
+        align-items: center;
     }
     #Logo{
-        height:80px;
-        width: 160px;
+        height:60px;
+        width: 120px;
+        margin-left: 10px;
+    }
+    #TOP_ELEMENT>i{
+        display: block;
+        margin-right: 20px;
+        cursor: pointer;
+        color: white;
+    }
+    #TOP_ELEMENT .menu{
+        display: none;
+    }
+    #TOP_ELEMENT .menu.active{
+        display: flex;
+        transition: 0.5s ease-in;
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        height: 100vh;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+        background-color: orange;
+        padding: 20px 0px 20px 0px;
+        overflow: scroll;         
+    }
+    .menu ul{
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+        gap: 0px;
+    }
+    .menu a{
+        width: 100%;
     }
     .cover{
         height: 45vh;
@@ -257,7 +569,7 @@ footer{
         object-position:center;
     }
     .booking{
-        max-width: 85vw;
+        max-width: 95vw;
         height: auto;
         gap: 20px;
         padding: 26px 0 26px 0;
@@ -278,5 +590,121 @@ footer{
     
     input[type=date]{
         width:auto;
+    }
+
+    .card_slider{
+        max-width: 300px;
+        border-radius: 20px;
+    }
+
+    .offer_section{
+        position: relative;
+        max-width: 100vw;
+        margin-bottom: 50px;
+    }
+    .offer_section .offer_slider{
+        max-width: 100vw;
+        border-radius: 0;
+    }
+    .offer_section .sliders{
+        position: absolute;
+        bottom: -30px;
+        right: 50%;
+    }
+    .offer_section .sliders.right{
+        transform: translate(20px);
+    }
+    .offer_card{
+        min-width: calc(100% - 42px);
+        height: 45vw;
+    }
+    .offer_image{
+        padding: 0;
+        min-width: 100vw;
+    }
+    .offer_image img{
+        min-width: 100vw;
+    }
+    .offers .use_code{
+        font-size: 2.25vw;
+    }
+    .offers .code{
+        font-weight: 1000;
+    }
+    .offers .code,.offer_date,.valid_till{
+        font-size: 3.6vw;
+    }
+    .offers .logo{
+        font-size: 5.4vw;
+        font-weight: 900;
+    }
+    .offers .offer_name{
+        font-size: 7.2vw;
+        font-weight: 900;
+    }
+    .offers .offer_tag{
+        font-size: 3.2vw;
+    }
+    .offers .left_circles, .right_circles{
+        gap: 2.25vw;
+    }
+    .offers .left_circles div, .right_circles div{
+        width: 1.8vw;
+        height: 3.6vw;
+    }
+    .offers .right_circles{
+        left: calc(100% - 1.8vw);
+    }
+    .offers .circle1, .offers .circle2{
+        width: 4.25vw;
+        height: 2.125vw;
+        left: calc(30% - 2.125vw);
+    }
+    .offers .circle2{
+        top: calc(100% - 2.125vw);
+    }
+    #why_kemsi a{
+        font-size: 30px;
+    }
+
+}
+@media(min-width:480px) and (max-width:760px){
+    #TOP_ELEMENT>i{
+        display: block;
+        margin-right: 20px;
+        cursor: pointer;
+        color: white;
+    }
+    #TOP_ELEMENT .menu{
+        display: none;
+    }
+    #TOP_ELEMENT .menu.active{
+        display: flex;
+        transition: 0.5s;
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        height: calc(100vh - 150px);
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+        background-color: orange;
+        padding: 20px 0px 20px 0px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .menu ul{
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+        gap: 0px;
+    }
+    .menu a{
+        width: 100%;
+    }
+}
+@media(max-height:480px){
+    .cover{
+        height: 90vh;
     }
 }
