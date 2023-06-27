@@ -4,25 +4,28 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>KEMSI AIRLINES</title>
-        <link rel="stylesheet" href="./styles/index.css">
+        <link rel="icon" href="./assets/images/icon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="test.css">
     </head>
     <body>
 <!----------------------NAV BAR STARTS---------------------->
         <header>
-            <div id="TOP_ELEMENT">
+            <div id="TOP_ELEMENT" class="top_element">
                 <div class="logo">
                     <img id="Logo" src="./assets/images/logo.png" alt="Logo of Kemsi Airlines">
                 </div>
+                <i class="fa-solid fa-bars"></i>
                 <div class="menu">
                     <ul class="upper">
-                        <li><a id="Contact"href="">Contact Us</a></li>
-                        <li><a id="Login" href="./public/login.html">Login</a></li>    
+                        <li><a id="Contact"href=""><i class="fa-solid fa-phone"></i> Contact Us</a></li>
+                        <li><a id="Login" href="./public/login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a></li>    
                     </ul>
                     <ul class="lower">
-                        <li><a href="">About Us</a></li>
-                        <li><a href="">Destinations</a></li>
-                        <li><a href="">Feedback</a></li>
-                        <li><a href="">Plan your journey</a></li>
+                        <li><a href=""><i class="fa-solid fa-people-group"></i> About Us</a></li>
+                        <li><a href=""><i class="fa-solid fa-map-location-dot"></i> Destinations</a></li>
+                        <li><a href=""><i class="fa-solid fa-comment"></i> Feedback</a></li>
+                        <li><a href=""><i class="fa-solid fa-plane"></i> Plan your journey</a></li>
                     </ul>                
                 </div>
             </div>
@@ -59,143 +62,214 @@
             </div>
             <div id="row_3">
                 <li class="row_3 fare_type spl"><input type="text" placeholder="Special Fare" id="special_fare"></li>
-                <li class="row_3 fare_type"><input type="text" placeholder="Add Promocode" id="add_promo"></li> 
+                <li class="row_3 fare_type promo"><input type="text" placeholder="Add Promocode" id="add_promo"></li> 
                 <li class="row_3 show_flight"><button id="show_flight">Show Flights</button></li>                  
             </div>                             
         </div>
 <!----------------------BOOKING SECTION ENDS---------------------->
 
+
+<!----------------------OFFERS STARTS---------------------->
+        <div class="card_section offer_section">
+            <i class="fa-solid fa-chevron-left sliders left"></i>
+            <div class="card_slider offer_slider">
+                <div class="offer_card card">
+                <!-- <img src="./assets/images/Untitled-3.png" alt="" id="offer_image"> -->
+                    <div class="offers">
+                        <div class="left_circles">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="left_out">
+                            <div class="left_part">
+                                <div class="code_section">
+                                    <p class="use_code">Use Code:</p>
+                                    <p class="code">SBI2023</p>
+                                </div>
+                                <div class="validity">
+                                    <p class="offer_date">October<br>31st</p>
+                                    <p class="valid_till">Valid till</p>
+                                </div>                
+                            </div>
+                        </div>                  
+                        <div class="right_out">
+                            <div class="right_part">
+                                <p class="logo">KEMSI AIRLINES</p>
+                                <!-- <img src="./assets/images/icon2.png" draggable="false" alt=""> -->
+                                <p class="offer_name">Flat 18% off</p>
+                                <p class="offer_tag">Using SBI credit cards</p>
+                            </div>
+                        </div>                
+                        <div class="circle1"></div>
+                        <div class="circle2"></div>
+                        <div class="right_circles">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>                  
+                    </div>
+                </div>   
+                <div class="offer_card offer_image card">
+                    <img src="./assets/images/red coupon.png" alt="30% discount on food and beverages" draggable="false">
+                </div> 
+                <div class="offer_card offer_image card">
+                    <img src="./assets/images/yellow coupon.gif" alt="6% cashback using ICICI cards" draggable="false">
+                </div>           
+            </div>
+            <i class="fa-solid fa-chevron-right sliders right"></i>
+        </div>
+
+<!----------------------OFFERS ENDS---------------------->              
+
 <!----------------------PLANS STARTS---------------------->
-<div id="plans">
-    <H1>Diverse Packages, Limitless Destinations</H1>
-    <h3>Unlock the best of travel with our custom-made packages, offering incredible value for your money.</h3>
-    <div class="card_slider">
-        <div class="card">
-            <div class="body">
-                <img src="./assets/images/group_travel.jpg" alt="">
-                <div class="text">
-                    <li class="name">Travel With Group</li>
-                    <li class="description">Ready for an amazing group outing?</li>
+        <div id="plans">
+            <H1>Diverse Packages, Limitless Destinations</H1>
+            <h3>Unlock the best of travel with our custom-made packages, offering incredible value for your money.</h3>
+            <div class="card_section">
+                <i class="fa-solid fa-chevron-left sliders left"></i>
+                <div class="card_slider">
+                    <div class="card">
+                        <div class="body">
+                            <img src="./assets/images/travel_with_group.jpg" alt="" draggable="false">
+                            <div class="text">
+                                <li class="name">Travel With Group</li>
+                                <li class="description">Ready for an amazing group outing?</li>
+                            </div>
+                        </div>
+                        <div class="tag">
+                            <a href="" draggable="false">Learn More</a>
+                        </div>
+                    </div>     
+                    <div class="card">
+                        <div class="body">
+                            <img src="./assets/images/tour.jpg" alt="" draggable="false">
+                            <div class="text">
+                                <li class="name">Fly, Stay, Explore</li>
+                                <li class="description">Travel to multiple destinations and explore...</li>
+                            </div>
+                        </div>
+                        <div class="tag">
+                            <a href="" draggable="false">Learn More</a>
+                        </div>
+                    </div>     
+                    <div class="card">
+                        <div class="body">
+                            <img src="./assets/images/tour2.jpg" alt="" draggable="false">
+                            <div class="text">
+                                <li class="name">Engage Traditions</li>
+                                <li class="description">Dvelve deep into the local culture</li>
+                            </div>
+                        </div>
+                        <div class="tag">
+                            <a href="" draggable="false">Learn More</a>
+                        </div>
+                    </div>     
+                    <div class="card">
+                        <div class="body">
+                            <img src="./assets/images/wellness.jpg" alt="" draggable="false">
+                            <div class="text">
+                                <li class="name">Welleness Retreat</li>
+                                <li class="description">Wanna go o</li>
+                            </div>
+                        </div>
+                        <div class="tag">
+                            <a href="" draggable="false">Learn More</a>
+                        </div>
+                    </div>     
                 </div>
-            </div>
-            <div class="tag">
-                <a href="">Learn More</a>
-            </div>
-        </div>     
-        <div class="card">
-            <div class="body">
-                <img src="./assets/images/fly_stay_explore.jpg" alt="">
-                <div class="text">
-                    <li class="name">Fly, Stay, Explore</li>
-                    <li class="description">Travel to multiple destinations and explore...</li>
-                </div>
-            </div>
-            <div class="tag">
-                <a href="">Learn More</a>
-            </div>
-        </div>     
-        <div class="card">
-            <div class="body">
-                <img src="./assets/images/engage_tradition.jpg" alt="">
-                <div class="text">
-                    <li class="name">Engage Traditions</li>
-                    <li class="description">Dvelve deep into the local culture</li>
-                </div>
-            </div>
-            <div class="tag">
-                <a href="">Learn More</a>
-            </div>
-        </div>     
-        <div class="card">
-            <div class="body">
-                <img src="./assets/images/wellness.jpg" alt="">
-                <div class="text">
-                    <li class="name">Welleness Retreat</li>
-                    <li class="description">Wanna go o</li>
-                </div>
-            </div>
-            <div class="tag">
-                <a href="">Learn More</a>
-            </div>
-        </div>     
-    </div>
-</div>
+                <i class="fa-solid fa-chevron-right sliders right"></i>
+            </div>   
+        </div>
 
 <!----------------------PLANS ENDS---------------------->
 
 <!----------------------GUIDELINES STARTS---------------------->
-<div id="guidelines">
-    <h1>Jet Set Go, with ease...</h1>
-    <h3>Take a moment to familiarize yourself with our travel guidelines.</h3>
-    <div class="card_slider">
-        <div class="card">
-            <div class="body">
-                <img src="./assets/images/baggage.jpg" alt="">
-                <div class="text">
-                    <li class="name">Baggage Allowance</li>
+        <div id="guidelines">
+            <h1>Jet Set Go, with ease...</h1>
+            <h3>Take a moment to familiarize yourself with our travel guidelines.</h3>
+            <div class="card_section">
+                <i class="fa-solid fa-chevron-left sliders left"></i>
+                <div class="card_slider">
+                    <div class="card">
+                        <div class="body">
+                            <img src="./assets/images/baggage.jpg" alt="" draggable="false">
+                            <div class="text">
+                                <li class="name">Baggage Allowance</li>
+                            </div>
+                        </div>
+                        <div class="tag">
+                            <a href="" draggable="false">Learn More</a>
+                        </div>
+                    </div>     
+                    <div class="card">
+                        <div class="body">
+                            <img src="./assets/images/boarding.jpg" alt="" draggable="false">
+                            <div class="text">
+                                <li class="name">Boarding and Check-In</li>
+                            </div>
+                        </div>
+                        <div class="tag">
+                            <a href="" draggable="false">Learn More</a>
+                        </div>
+                    </div>     
+                    <div class="card">
+                        <div class="body">
+                            <img src="./assets/images/in_flight.jpg" alt="" draggable="false">
+                            <div class="text">
+                                <li class="name">In-Flight</li>
+                            </div>
+                        </div>
+                        <div class="tag">
+                            <a href="" draggable="false">Learn More</a>
+                        </div>
+                    </div>     
+                    <div class="card">
+                        <div class="body">
+                            <img src="./assets/images/Contact_us.jpg" alt="" draggable="false">
+                            <div class="text">
+                                <li class="name">Ask for support</li>
+                            </div>
+                        </div>
+                        <div class="tag">
+                            <a href="" draggable="false">Contact</a>
+                        </div>
+                    </div>     
                 </div>
+                <i class="fa-solid fa-chevron-right sliders right"></i>
             </div>
-            <div class="tag">
-                <a href="">Learn More</a>
-            </div>
-        </div>     
-        <div class="card">
-            <div class="body">
-                <img src="./assets/images/boarding.jpg" alt="">
-                <div class="text">
-                    <li class="name">Boarding and Check-In</li>
-                </div>
-            </div>
-            <div class="tag">
-                <a href="">Learn More</a>
-            </div>
-        </div>     
-        <div class="card">
-            <div class="body">
-                <img src="./assets/images/in_flight.jpg" alt="">
-                <div class="text">
-                    <li class="name">In-Flight</li>
-                </div>
-            </div>
-            <div class="tag">
-                <a href="">Learn More</a>
-            </div>
-        </div>     
-        <div class="card">
-            <div class="body">
-                <img src="./assets/images/Contact_us.jpg" alt="">
-                <div class="text">
-                    <li class="name">Ask for support</li>
-                </div>
-            </div>
-            <div class="tag">
-                <a href="">Contact</a>
-            </div>
-        </div>     
-    </div>
-</div>
+            
+        </div>
 
 <!----------------------GUIDELINES ENDS---------------------->
 
-
-        <H2>HEY! USER WELCOME!</H2>
-        <P>Hello user how are you. <br> We are very delighted to have you here.</P>
-        <hr>
-        <h2>Our Facilities:</h2>
-        <ul>
-            <li>Air conditioned Compartments.</li>
-            <li>Heavy safety measures.</li>
-            <li>Well trained staff to help you.</li>
-            <li>Luxurious Bathrooms.</li>
-        </ul>
-        <h2>Instructions for you:</h2>
-        <ol>
-            <li>Fasten your seat belts.</li>
-            <li>Switch off your mobile phones/keep them in aeroplane mode.</li>
-        </ol>
-        <hr>
+        <div id="why_kemsi">
+            <a href="">Why Choose Us ?</a>
+        </div>
         <footer>
+            <div class="follow_us">
+                <p>Follow Us On Social Media</p>
+                <div class="social_media">
+                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <hr>
             <p draggable="true">All rights reserved © KEMSI AIRLINES</p>
-        </footer>   
+        </footer>
+          
     </body>
+    <script src="./script/index.js"></script>
 </html>
