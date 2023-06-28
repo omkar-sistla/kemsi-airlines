@@ -1,0 +1,41 @@
+html{
+    background-color:#576CBC ;
+}
+#Logo{
+    width: 200px;
+    height: 100px;
+    padding-left: 10px;    
+}
+ul{
+    text-align: center;
+    list-style: none;    
+    border: 10px solid #0B2447;
+    background-color: #0B2447;
+    margin:100px 20% 100px 60%;
+    padding:50px 20px 50px 20px;  
+}
+.input,.link{
+    padding: 10px 0px 10px 0px;
+    color: white;
+}
+#forgot_password{
+    color: white;
+}
+#login_page{
+    margin-top: -100px;
+}
+#text{
+    margin:300px 0px -250px 500px;
+    color: white;
+}
+hr{
+    background-color: white;    
+}
+button{
+    background-color: #A5D7E8;
+    border-radius: 6px;
+    margin: 4pt 30pt 4pt 30pt;
+    font-size: 12pt;
+    font-family: Helvetica, Arial, sans-serif
+}
+
